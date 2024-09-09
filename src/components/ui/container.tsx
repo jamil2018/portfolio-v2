@@ -9,5 +9,5 @@ export default function Container({
   children,
   className = "",
 }: ContainerProps) {
-  return <div className={`w-[95vw] mx-auto ${className}`}>{children}</div>;
+  return <div className={`max-w-[85vw] mx-auto ${className}`}>{children}</div>;
 }
