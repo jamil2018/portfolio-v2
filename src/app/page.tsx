@@ -1,5 +1,3 @@
-"use client";
-
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
@@ -8,6 +6,9 @@ import {
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconTestPipe,
+  IconAutomation,
+  IconDevicesCode,
 } from "@tabler/icons-react";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Container from "@/components/ui/container";
@@ -170,28 +171,23 @@ export default function Home() {
 
         {/* skills and expertise section */}
         <div id="skills" className="mt-40">
-          {/* <div className="p-48 rounded-3xl">
-            <Meteors number={10} />
-            <h1 className="text-4xl text-center mb-14 ">
-              Check out the things I am good at...
-            </h1>
-          </div> */}
           <div className="">
             <div className=" w-full relative max-w-screen-2xl -z-10">
               <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-              <div className="relative shadow-xl bg-black border border-gray-900  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+              <div className="relative shadow-xl bg-gray-900 border border-gray-700  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
                 <h1 className="text-4xl text-center p-40 mb-10 w-full">
                   Check out the things I am good at...
                 </h1>
-
-                {/* Meaty part - Meteor effect */}
-                <Meteors number={20} />
+                <Meteors number={25} />
               </div>
             </div>
           </div>
-          <div className="flex -mt-36 px-10 py-10">
-            <Card className="flex-1 rounded-tr-none rounded-br-none py-40">
+          <div className="flex -mt-36 p-10">
+            <Card className="flex-1 rounded-tr-none rounded-br-none py-5">
               <CardHeader className="mb-6">
+                <div className="flex justify-center items-center mb-10">
+                  <IconTestPipe size={40} />
+                </div>
                 <CardTitle className="text-center mb-4 text-3xl">
                   Software Testing
                 </CardTitle>
@@ -208,15 +204,17 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="flex-1 rounded-none border-l-0">
+            <Card className="flex-1 rounded-none border-l-0 py-5">
               <CardHeader className="mb-6">
+                <div className="flex justify-center items-center mb-10">
+                  <IconAutomation size={40} />
+                </div>
                 <CardTitle className="text-center mb-4 text-3xl">
                   Test Automation
                 </CardTitle>
                 <CardDescription className="text-center">
                   I value efficiency and I am always looking for ways to make my
-                  work more efficient and effective using all the tools at my
-                  disposal
+                  work more efficient
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -224,24 +222,22 @@ export default function Home() {
                 <p>Selenium, Cypress, Playwright, Nightwatch JS</p>
               </CardContent>
             </Card>
-            <Card className="flex-1 rounded-tl-none rounded-bl-none border-l-0">
-              <CardHeader>
-                <CardTitle>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Fugit, possimus?
+            <Card className="flex-1 rounded-tl-none rounded-bl-none border-l-0 py-5">
+              <CardHeader className="mb-6">
+                <div className="flex justify-center items-center mb-10">
+                  <IconDevicesCode size={40} />
+                </div>
+                <CardTitle className="text-center mb-4 text-3xl">
+                  Full Stack Web Development
                 </CardTitle>
+                <CardDescription className="text-center">
+                  I am passionate about creating beautiful, interactive and user
+                  friendly web applications
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt nisi aperiam, minima distinctio excepturi amet, nihil
-                  facere in ducimus temporibus voluptates libero aut, minus cum.
-                  Odio corporis molestiae, ipsam minus sed blanditiis
-                  consectetur magni porro, perspiciatis et dolore quo officia
-                  quia debitis consequuntur aliquam iusto maiores sequi. Porro
-                  saepe sapiente amet laborum tempore. Corporis temporibus vel
-                  ullam reprehenderit adipisci cumque esse totam laborum quis
-                </p>
+              <CardContent className="text-center">
+                <h3 className="text-orange-600">Technologies I like to use</h3>
+                <p>React, Nextjs, Node, Express</p>
               </CardContent>
             </Card>
           </div>
