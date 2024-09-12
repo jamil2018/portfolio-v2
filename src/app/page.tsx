@@ -23,6 +23,9 @@ import {
 } from "@/components/ui/card";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Meteors } from "@/components/ui/meteors";
+import { ProjectCarousel } from "@/components/project-carousel";
+import { ExperienceTimeLine } from "@/components/experience-timeline";
+import { ContactMe } from "@/components/contact-me";
 
 const links = [
   {
@@ -173,8 +176,8 @@ export default function Home() {
         <div id="skills" className="mt-40">
           <div className="">
             <div className=" w-full relative max-w-screen-2xl -z-10">
-              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-              <div className="relative shadow-xl bg-gray-900 border border-gray-700  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-yellow-500 to-orange-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+              <div className="relative shadow-xl bg-black border border-gray-900  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
                 <h1 className="text-4xl text-center p-40 mb-10 w-full">
                   Check out the things I am good at...
                 </h1>
@@ -243,81 +246,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* demo meteors */}
-
         {/* projects section */}
         <div id="projects">
-          <h1>Projects</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
-            modi voluptate magni nihil, cumque illum eos voluptatem earum at
-            corrupti laborum distinctio nemo. Quasi eligendi dicta assumenda
-            ipsam voluptates molestiae doloribus, id consequatur exercitationem!
-            Dolorum tenetur, magni, error repellendus non repellat quas pariatur
-            aut facilis unde illo nihil recusandae aliquid ea. Reiciendis
-            provident qui repudiandae saepe neque dolor placeat veniam
-            laboriosam libero! Voluptates dolores exercitationem adipisci alias,
-            corporis eius laboriosam modi molestiae cum perspiciatis quas
-            consectetur, provident nam iusto perferendis reprehenderit
-            consequatur suscipit odio et. Sed ipsa consectetur eius, laudantium,
-            est nihil vitae molestias alias nisi recusandae odit earum,
-            reprehenderit consequuntur. Ex eius quasi perspiciatis sint
-            accusamus quos itaque consequuntur vero aut fugit. Id porro
-            aspernatur unde itaque pariatur nisi nesciunt, laborum corporis
-            quasi odio cupiditate repellendus quas reprehenderit quos! Porro
-            cupiditate aut, quas quidem iusto, neque minima, modi odit suscipit
-            nulla quasi omnis quos est. Quas sequi quidem voluptate!
-          </p>
+          <ProjectCarousel />
         </div>
 
         {/* experience section */}
-        <div id="experience">
-          <h1>Experience</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
-            modi voluptate magni nihil, cumque illum eos voluptatem earum at
-            corrupti laborum distinctio nemo. Quasi eligendi dicta assumenda
-            ipsam voluptates molestiae doloribus, id consequatur exercitationem!
-            Dolorum tenetur, magni, error repellendus non repellat quas pariatur
-            aut facilis unde illo nihil recusandae aliquid ea. Reiciendis
-            provident qui repudiandae saepe neque dolor placeat veniam
-            laboriosam libero! Voluptates dolores exercitationem adipisci alias,
-            corporis eius laboriosam modi molestiae cum perspiciatis quas
-            consectetur, provident nam iusto perferendis reprehenderit
-            consequatur suscipit odio et. Sed ipsa consectetur eius, laudantium,
-            est nihil vitae molestias alias nisi recusandae odit earum,
-            reprehenderit consequuntur. Ex eius quasi perspiciatis sint
-            accusamus quos itaque consequuntur vero aut fugit. Id porro
-            aspernatur unde itaque pariatur nisi nesciunt, laborum corporis
-            quasi odio cupiditate repellendus quas reprehenderit quos! Porro
-            cupiditate aut, quas quidem iusto, neque minima, modi odit suscipit
-            nulla quasi omnis quos est. Quas sequi quidem voluptate!
-          </p>
+        <div id="experience" className="mb-20">
+          <ExperienceTimeLine />
         </div>
 
         {/* contact section */}
-        <div id="contact">
-          <h1>Contact Me</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
-            modi voluptate magni nihil, cumque illum eos voluptatem earum at
-            corrupti laborum distinctio nemo. Quasi eligendi dicta assumenda
-            ipsam voluptates molestiae doloribus, id consequatur exercitationem!
-            Dolorum tenetur, magni, error repellendus non repellat quas pariatur
-            aut facilis unde illo nihil recusandae aliquid ea. Reiciendis
-            provident qui repudiandae saepe neque dolor placeat veniam
-            laboriosam libero! Voluptates dolores exercitationem adipisci alias,
-            corporis eius laboriosam modi molestiae cum perspiciatis quas
-            consectetur, provident nam iusto perferendis reprehenderit
-            consequatur suscipit odio et. Sed ipsa consectetur eius, laudantium,
-            est nihil vitae molestias alias nisi recusandae odit earum,
-            reprehenderit consequuntur. Ex eius quasi perspiciatis sint
-            accusamus quos itaque consequuntur vero aut fugit. Id porro
-            aspernatur unde itaque pariatur nisi nesciunt, laborum corporis
-            quasi odio cupiditate repellendus quas reprehenderit quos! Porro
-            cupiditate aut, quas quidem iusto, neque minima, modi odit suscipit
-            nulla quasi omnis quos est. Quas sequi quidem voluptate!
-          </p>
+        <div id="contact" className="mb-20">
+          <ContactMe />
         </div>
       </TracingBeam>
     </>
