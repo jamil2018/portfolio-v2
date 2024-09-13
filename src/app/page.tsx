@@ -22,10 +22,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-import { Meteors } from "@/components/ui/meteors";
-import { ProjectCarousel } from "@/components/project-carousel";
-import { ExperienceTimeLine } from "@/components/experience-timeline";
 import { ContactMe } from "@/components/contact-me";
+import AboutMe from "@/components/about-me";
+import Skills from "@/components/skills";
+import { ProjectCarousel } from "@/components/projects";
+import { ExperienceTimeLine } from "@/components/experience";
+import Hero from "@/components/hero";
 
 const links = [
   {
@@ -74,13 +76,6 @@ const links = [
   },
 ];
 
-const hereSectionWords = [
-  "QA engineer",
-  "test automation engineer",
-  "backend test engineer",
-  "full stack web dev",
-];
-
 export default function Home() {
   return (
     <>
@@ -89,177 +84,23 @@ export default function Home() {
         <FloatingDock items={links} />
       </div>
       {/* hero section */}
-      <Container>
-        <div className="my-12">
-          <HeroHighlight>
-            <h1 className="text-8xl text-neutral-400 mb-2">Hi, I am Jamil</h1>
-            <div className="ml-2 text-4xl text-neutral-300 mb-6">
-              I am a
-              <span>
-                <FlipWords words={hereSectionWords} />
-              </span>
-            </div>
-            <div className="flex gap-3">
-              <Button>Explore my projects</Button>
-              <Button>Let's work together</Button>
-            </div>
-          </HeroHighlight>
-        </div>
-      </Container>
+      <Hero />
 
-      {/* about me section */}
       <TracingBeam className="px-6 max-w-screen-2xl">
-        <div id="about" className="flex justify-between">
-          <div className="w-1/3">
-            <h1 className="text-7xl text-neutral-400 mb-3">About Me</h1>
-            <hr className="w-1/6 h-1 border-none bg-orange-600" />
-          </div>
-          <div className="w-2/3 text-lg text-neutral-300">
-            <p className="leading-9 mb-12">
-              A passionate full-stack developer with a strong background in
-              modern web technologies. I excel in using Next.js for building
-              robust, scalable applications and Three.js to create interactive
-              3D visuals on the web. I also have experience developing efficient
-              test automation frameworks, which helps me ensure high-quality
-              software development. I am constantly driven to learn and
-              experiment with cutting-edge technologies. I enjoy solving complex
-              problems, collaborating on innovative projects, and pushing the
-              boundaries of what’s possible in the digital space.
-            </p>
-            <h3 className="font-bold mb-3">Key Achievements</h3>
-            <div className="flex gap-4 flex-wrap">
-              <Card className="flex-1 flex items-center">
-                <CardContent className="text-sm py-6 ">
-                  <p>
-                    Increased testing efficiency by automating test scenarios by
-                    30 percent
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="flex-1 flex items-center">
-                <CardContent className="text-sm p-6">
-                  <p>
-                    Implemented CI/CD pipeline to increase the usability of
-                    automation test suites by 15 percent
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="flex-1 flex items-center">
-                <CardContent className="text-sm p-6">
-                  <p>
-                    Added automated task plan creator to reduce time expenditure
-                    on task creation on issue tracker by 20 percent
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="flex-1 flex items-center">
-                <CardContent className="text-sm p-6">
-                  <p>
-                    Reduced post deployment defects by 50 percent by introducing
-                    effective automated testing solutions
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="flex-1 flex items-center">
-                <CardContent className="text-sm p-6">
-                  <p>
-                    Implemented robust test automation framework that is highly
-                    scalable, maintainable and usable
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
+        {/* about me section */}
+        <AboutMe />
 
         {/* skills and expertise section */}
-        <div id="skills" className="mt-40">
-          <div className="">
-            <div className=" w-full relative max-w-screen-2xl -z-10">
-              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-yellow-500 to-orange-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-              <div className="relative shadow-xl bg-black border border-gray-900  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-                <h1 className="text-4xl text-center p-40 mb-10 w-full">
-                  Check out the things I am good at...
-                </h1>
-                <Meteors number={25} />
-              </div>
-            </div>
-          </div>
-          <div className="flex -mt-36 p-10">
-            <Card className="flex-1 rounded-tr-none rounded-br-none py-5">
-              <CardHeader className="mb-6">
-                <div className="flex justify-center items-center mb-10">
-                  <IconTestPipe size={40} />
-                </div>
-                <CardTitle className="text-center mb-4 text-3xl">
-                  Software Testing
-                </CardTitle>
-                <CardDescription className="text-center">
-                  I am a perfectionist who is obsessed with pushing out pristine
-                  solutions
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <h3 className="text-orange-600">Things I am good at</h3>
-                <p>
-                  Functional Testing, Non Functional Testing, API Testing,
-                  Backend Testing
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="flex-1 rounded-none border-l-0 py-5">
-              <CardHeader className="mb-6">
-                <div className="flex justify-center items-center mb-10">
-                  <IconAutomation size={40} />
-                </div>
-                <CardTitle className="text-center mb-4 text-3xl">
-                  Test Automation
-                </CardTitle>
-                <CardDescription className="text-center">
-                  I value efficiency and I am always looking for ways to make my
-                  work more efficient
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <h3 className="text-orange-600">Tools I am familiar with</h3>
-                <p>Selenium, Cypress, Playwright, Nightwatch JS</p>
-              </CardContent>
-            </Card>
-            <Card className="flex-1 rounded-tl-none rounded-bl-none border-l-0 py-5">
-              <CardHeader className="mb-6">
-                <div className="flex justify-center items-center mb-10">
-                  <IconDevicesCode size={40} />
-                </div>
-                <CardTitle className="text-center mb-4 text-3xl">
-                  Full Stack Web Development
-                </CardTitle>
-                <CardDescription className="text-center">
-                  I am passionate about creating beautiful, interactive and user
-                  friendly web applications
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <h3 className="text-orange-600">Technologies I like to use</h3>
-                <p>React, Nextjs, Node, Express</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <Skills />
 
         {/* projects section */}
-        <div id="projects">
-          <ProjectCarousel />
-        </div>
+        <ProjectCarousel />
 
         {/* experience section */}
-        <div id="experience" className="mb-20">
-          <ExperienceTimeLine />
-        </div>
+        <ExperienceTimeLine />
 
         {/* contact section */}
-        <div id="contact" className="mb-20">
-          <ContactMe />
-        </div>
+        <ContactMe />
       </TracingBeam>
     </>
   );

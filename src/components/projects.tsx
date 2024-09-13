@@ -9,7 +9,7 @@ export function ProjectCarousel() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full py-20" id="projects">
       <h2 className="max-w-full pl-4 mx-auto text-xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Take a peek into some of the things I have worked on..
       </h2>
